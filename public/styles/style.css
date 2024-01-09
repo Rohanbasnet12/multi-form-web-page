@@ -1,0 +1,37 @@
+/* LINKS */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS VARIABLES */
+:root {
+    /* FONTS */
+    --PRIMARY-FONT: 'Ubuntu', sans-serif;
+    --PARAH-FSIZE: 16px;
+
+    --FONT-WEIGHT1: 400;
+    --FONT-WEIGHT2: 500;
+    --FONT-WEIGHT3: 700;
+
+
+    /* COLORS */
+    --MARINE-BLUE: hsl(213, 96%, 18%);
+    --PURPLISH-BLUE: hsl(243, 100%, 62%);
+    --PASTEL-BLUE: hsl(228, 100%, 84%);
+    --LIGHT-BLUE: hsl(206, 94%, 87%);
+    --STRAWBERRY-RED: hsl(354, 84%, 57%);
+
+
+    --COOL-GRAY: hsl(231, 11%, 63%);
+    --LIGHT-GRAY: hsl(229, 24%, 87%);
+    --MANGOLIA: hsl(217, 100%, 97%);
+    --ALABASTER: hsl(231, 100%, 99%);
+    --WHITE: hsl(0, 0%, 100%);
+}
+
+/* GENERAL STYLES */
