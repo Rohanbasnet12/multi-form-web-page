@@ -13,13 +13,96 @@
   <link rel="stylesheet" href="./public/styles/style.css">
   <link rel="stylesheet" href="./public/styles/responsive.css">
 
-  <title>Frontend Mentor | Multi-step form</title>
+  <title>Rohan Basnet | Multi-step form</title>
 
 </head>
 
 <body>
+  <main id="main" class="flex items-center justify-center">
+    <div id="parent_container" class="container md:w-3/5 lg:max-w-screen-lg rounded-2xl p-3 flex gap-4">
+      <!-- LEFT CONTAINER -->
+      <div id="left_container" class="container w-2/6">
+        <div class="img">
+          <div class="max-width">
+            <svg xmlns="http://www.w3.org/2000/svg" width="274" height="568" fill="none" viewBox="0 0 274 568">
+              <rect width="274" height="568" fill="#483EFF" rx="10" />
+              <mask id="a" width="274" height="568" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+                <rect width="274" height="568" fill="#fff" rx="10" />
+              </mask>
+              <g mask="url(#a)">
+                <path fill="#6259FF" fill-rule="evenodd"
+                  d="M-34.692 543.101C3.247 632.538 168.767 685.017 211.96 612.52c43.194-72.497-66.099-85.653-104.735-160.569-38.635-74.916-68.657-121.674-124.482-104.607-55.824 17.068-55.375 106.32-17.436 195.757Z"
+                  clip-rule="evenodd" />
+                <path fill="#F9818E" fill-rule="evenodd"
+                  d="M233.095 601.153c60.679-28.278 92.839-143.526 41.875-171.528-50.965-28.003-57.397 47.579-108.059 75.987-50.662 28.408-82.14 50.207-69.044 88.241 13.096 38.034 74.549 35.578 135.228 7.3Z"
+                  clip-rule="evenodd" />
+                <path stroke="#fff" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="5"
+                  d="m165.305 469.097 10.607-10.806M209.461 474.581l-12.506-10.503M187.56 488.991l-6.908 14.798" />
+                <path fill="#FFAF7E"
+                  d="M.305 546.891c37.003 0 67-29.997 67-67s-29.997-67-67-67-67 29.997-67 67 29.997 67 67 67Z" />
+              </g>
+            </svg>
+          </div>
+          <div class="min-width">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="172"
+              viewBox="0 0 375 172">
+              <defs>
+                <path id="a" d="M0 0h375v172H0z" />
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <mask id="b" fill="#fff">
+                  <use xlink:href="#a" />
+                </mask>
+                <use xlink:href="#a" fill="#483EFF" />
+                <g mask="url(#b)">
+                  <g transform="translate(-151.029 -133.957)">
+                    <path fill="#6259FF"
+                      d="M79.546 349.634c54.547 128.646 292.524 204.132 354.626 99.852 62.102-104.28-95.035-123.204-150.583-230.963-55.547-107.759-98.711-175.015-178.973-150.466C24.354 92.607 25 220.987 79.546 349.634Z" />
+                    <ellipse cx="129.864" cy="258.711" fill="#FFAF7E" rx="96.329" ry="96.373" />
+                    <path fill="#F9818E"
+                      d="M464.88 433.146c87.31-40.69 133.585-206.525 60.253-246.82-73.333-40.293-82.587 68.465-155.485 109.343-72.898 40.877-118.192 72.245-99.348 126.973 18.845 54.728 107.27 51.194 194.58 10.504Z" />
+                    <g stroke="#FFF" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="5">
+                      <path
+                        d="m367.336 243.125 15.263-15.549M430.872 251.016l-17.995-15.112M399.36 271.751l-9.94 21.293" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- RIGHT CONTAINER -->
+      <div id="right_container" class="container w-4/6 py-11 px-11">
+        <div id="form" class="h-full flex flex-col gap-4 h-4">
+          <div class="box1 h-1/6">
+            <h1 class="text-2xl">Personal info</h1>
+            <p>Please provide your name, email address, and phone number.</p>
+          </div>
+          <div class="box2 h-4/6 flex flex-col gap-1">
+            <label for="userName">Name <span id="errorName">This field is required</span></label>
+            <input type="text" id="userName" placeholder="e.g. Stephen King"
+              class="pb-3 border-2 rounded-md px-3 py-1 mb-3">
 
-  <!-- Sidebar start -->
+            <label for="userEmail">Email Address <span id="errorEmail">This field is required</span></label>
+            <input type="email" id="userEmail" placeholder="e.g. stephenking@lorem.com"
+              class="border-2 rounded-md px-3 py-1 pb-3 mb-3">
+
+            <label for="userNumber">Phone Number <span id="errorNumber">This field is required</span></label>
+            <input type="text" id="userNumber" placeholder="e.g. +1 234 567 890"
+              class="border-2 rounded-md px-3 py-1 mb-3">
+          </div>
+
+          <div class="box3 h-1/6 text-right">
+            <button id="btn">
+              Next Step
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--
 
   Step 1
   Your info
@@ -33,9 +116,6 @@
   Step 4
   Summary
 
-  <!-- Sidebar end -->
-
-  <!-- Step 1 start -->
 
   Personal info
   Please provide your name, email address, and phone number.
@@ -43,17 +123,13 @@
   Name
   e.g. Stephen King
 
-  Email Address
-  e.g. stephenking@lorem.com
 
-  Phone Number
-  e.g. +1 234 567 890
 
-  Next Step
+  
+  
 
-  <!-- Step 1 end -->
+  
 
-  <!-- Step 2 start -->
 
   Select your plan
   You have the option of monthly or yearly billing.
@@ -73,10 +149,6 @@
   Go Back
   Next Step
 
-  <!-- Step 2 end -->
-
-  <!-- Step 3 start -->
-
   Pick add-ons
   Add-ons help enhance your gaming experience.
 
@@ -95,23 +167,15 @@
   Go Back
   Next Step
 
-  <!-- Step 3 end -->
-
-  <!-- Step 4 start -->
-
   Finishing up
   Double-check everything looks OK before confirming.
 
-  <!-- Dynamically add subscription and add-on selections here -->
 
   Total (per month/year)
 
   Go Back
   Confirm
 
-  <!-- Step 4 end -->
-
-  <!-- Step 5 start -->
 
   Thank you!
 
@@ -119,12 +183,15 @@
   using our platform. If you ever need support, please feel free
   to email us at support@loremgaming.com.
 
-  <!-- Step 5 end -->
+-->
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+
+  <!-- LINKING JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- LINKING JS -->
+  <script src="./public/JS/app.js"></script>
 </body>
 
 </html>

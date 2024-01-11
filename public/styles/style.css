@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--PRIMARY-FONT);
 }
 
 /* CSS VARIABLES */
@@ -35,3 +36,76 @@
 }
 
 /* GENERAL STYLES */
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+/* STYLING MAIN SECTION */
+#main {
+    width: 100vw;
+    height: 100vh;
+    background: var(--MANGOLIA);
+}
+
+#parent_container {
+    background: var(--WHITE);
+    box-shadow: .5em .5em 1.5em #9a9a9a;
+}
+
+/* STYLING LEFT CONTAINER */
+
+
+
+/* STYLING RIGHT CONTAINER */
+
+#form h1 {
+    color: var(--MARINE-BLUE);
+}
+
+#form p {
+    font-size: var(--PARAH-FSIZE);
+    color: var(--COOL-GRAY);
+    font-weight: var(--FONT-WEIGHT1);
+    font-size: .9em;
+}
+
+.box2 label {
+    color: var(--MARINE-BLUE);
+    font-size: .9em;
+    font-weight: var(--FONT-WEIGHT1);
+    position: relative;
+}
+
+.box2 label span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: .8em;
+    color: var(--STRAWBERRY-RED);
+    display: none;
+}
+
+.box2 input {
+    outline: none;
+}
+
+.box2 input:hover {
+    cursor: pointer;
+}
+
+.box2 input:focus {
+    border: 1px solid var(--PURPLISH-BLUE);
+}
+
+.box3>button {
+    background: var(--MARINE-BLUE);
+    color: var(--WHITE);
+    padding: .5em 1em;
+    border-radius: 8px;
+    transition: all .1s ease-out;
+}
+
+.box3>button:hover {
+    background: hsl(213, 84%, 41%);
+}
