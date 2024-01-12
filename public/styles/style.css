@@ -35,6 +35,50 @@
     --WHITE: hsl(0, 0%, 100%);
 }
 
+/* UTILS */
+.btn_rounded {
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid var(--WHITE);
+    color: var(--WHITE);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-flow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 1em;
+}
+
+.innerFlex {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 110px;
+    text-transform: uppercase;
+}
+
+.innerFlex span {
+    font-size: .8em;
+    color: var(--COOL-GRAY);
+}
+
+.innerFlex h2 {
+    color: var(--WHITE);
+    font-weight: var(--FONT-WEIGHT2);
+}
+
+.btn_rounded:hover {
+    background: #ffffff26;
+}
+
 /* GENERAL STYLES */
 html,
 body {
@@ -51,11 +95,21 @@ body {
 #parent_container {
     background: var(--WHITE);
     box-shadow: .5em .5em 1.5em #9a9a9a;
+    position: relative;
 }
 
 /* STYLING LEFT CONTAINER */
+#toggle-buttons {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 20vw;
+    height: 50vh;
+}
 
-
+.min-width svg {
+    display: none;
+}
 
 /* STYLING RIGHT CONTAINER */
 

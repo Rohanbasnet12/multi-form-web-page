@@ -71,34 +71,71 @@
             </svg>
           </div>
         </div>
-      </div>
-      <!-- RIGHT CONTAINER -->
-      <div id="right_container" class="container w-4/6 py-11 px-11">
-        <div id="form" class="h-full flex flex-col gap-4 h-4">
-          <div class="box1 h-1/6">
-            <h1 class="text-2xl">Personal info</h1>
-            <p>Please provide your name, email address, and phone number.</p>
+        <div id="toggle-buttons">
+          <div class="flex-flow button1">
+            <button class="btn_rounded" style="background: aquamarine;">1</button>
+            <div class="innerFlex">
+              <span>Step 1</span>
+              <h2>Your info</h2>
+            </div>
           </div>
-          <div class="box2 h-4/6 flex flex-col gap-1">
-            <label for="userName">Name <span id="errorName">This field is required</span></label>
-            <input type="text" id="userName" placeholder="e.g. Stephen King"
-              class="pb-3 border-2 rounded-md px-3 py-1 mb-3">
-
-            <label for="userEmail">Email Address <span id="errorEmail">This field is required</span></label>
-            <input type="email" id="userEmail" placeholder="e.g. stephenking@lorem.com"
-              class="border-2 rounded-md px-3 py-1 pb-3 mb-3">
-
-            <label for="userNumber">Phone Number <span id="errorNumber">This field is required</span></label>
-            <input type="text" id="userNumber" placeholder="e.g. +1 234 567 890"
-              class="border-2 rounded-md px-3 py-1 mb-3">
+          <div class="flex-flow button2">
+            <button class="btn_rounded">2</button>
+            <div class="innerFlex">
+              <span>Step 2</span>
+              <h2>Select plan</h2>
+            </div>
           </div>
-
-          <div class="box3 h-1/6 text-right">
-            <button id="btn">
-              Next Step
-            </button>
+          <div class="flex-flow button3">
+            <button class="btn_rounded">3</button>
+            <div class="innerFlex">
+              <span>Step 3</span>
+              <h2>Add-ons</h2>
+            </div>
+          </div>
+          <div class="flex-flow button4">
+            <button class="btn_rounded">4</button>
+            <div class="innerFlex">
+              <span>Step 4</span>
+              <h2>Summary</h2>
+            </div>
           </div>
         </div>
+      </div>
+
+      <!-- RIGHT CONTAINER -->
+      <div id="right_container" class="container w-4/6 py-11 px-11">
+        <div class="firstForm" data-index="1">
+          <div id="form" class="h-full flex flex-col gap-4 h-4">
+            <div class="box1 h-1/6">
+              <h1 class="text-2xl">Personal info</h1>
+              <p>Please provide your name, email address, and phone number.</p>
+            </div>
+            <div class="box2 h-4/6 flex flex-col gap-1">
+              <label for="userName">Name <span id="errorName">This field is required</span></label>
+              <input type="text" id="userName" placeholder="e.g. Stephen King"
+                class="pb-3 border-2 rounded-md px-3 py-1 mb-3">
+
+              <label for="userEmail">Email Address <span id="errorEmail">This field is required</span></label>
+              <input type="email" id="userEmail" placeholder="e.g. stephenking@lorem.com"
+                class="border-2 rounded-md px-3 py-1 pb-3 mb-3">
+
+              <label for="userNumber">Phone Number <span id="errorNumber">This field is required</span></label>
+              <input type="text" id="userNumber" placeholder="e.g. +1 234 567 890"
+                class="border-2 rounded-md px-3 py-1 mb-3">
+            </div>
+
+            <div class="box3 h-1/6 text-right">
+              <button id="btn">
+                Next Step
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="secondForm bg-red-300" data-index="2"></div>
+        <div class="thirdForm bg-yellow-300" data-index="3"></div>
+        <div class="fourthForm bg-green-300" data-index="4"></div>
       </div>
     </div>
   </main>

@@ -41,4 +41,15 @@ $(document).ready(function () {
             alert(`User name is ${userName}, his email is ${userEmail}, and his number is ${userNumber}`);
         }
     });
+
+    // TRACK THE LEFT BUTTON WHEN CLICKED
+    $('.btn_rounded').each(function () {
+        $(this).on('click', function () {
+            // Set background to 'aquamarine' for the clicked button
+            $(this).css('background', 'aquamarine');
+
+            // Set background to 'none' for the other buttons
+            $('.btn_rounded').not(this).css('background', 'none');
+        });
+    });
 });
