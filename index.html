@@ -105,7 +105,8 @@
 
       <!-- RIGHT CONTAINER -->
       <div id="right_container" class="container w-4/6 py-11 px-11">
-        <div class="firstForm" data-index="1">
+        <div class="form-container" data-index="1" style="display: none;">
+          <!-- Remember to change the display to block after fixing the bottom code -->
           <div id="form" class="h-full flex flex-col gap-4 h-4">
             <div class="box1 h-1/6">
               <h1 class="text-2xl">Personal info</h1>
@@ -133,9 +134,44 @@
           </div>
         </div>
 
-        <div class="secondForm bg-red-300" data-index="2"></div>
-        <div class="thirdForm bg-yellow-300" data-index="3"></div>
-        <div class="fourthForm bg-green-300" data-index="4"></div>
+        <div class="form-container h-4" data-index="2" style="display: block;">
+          <!-- Remember to change the display to none after fixing the code -->
+          <div id="planForm">
+            <div class="box1 h-1/6">
+              <h1 class="text-2xl">Select your plan</h1>
+              <p>You have the option of monthly or yearly billing.</p>
+            </div>
+
+            <div class="box2 h-4/6 flex flex-col gap-11">
+              <div class="plan flex">
+                <div class="btn1 chooseBtn">
+                  <button></button>
+                </div>
+                <div class="btn2 chooseBtn">
+                  <button></button>
+                </div>
+                <div class="btn3 chooseBtn">
+                  <button></button>
+                </div>
+              </div>
+              <div class="choosePlanBtn">
+                <button type="button"></button>
+              </div>
+            </div>
+
+
+            <div class="box3 h-1/6 text-right flex justify-between">
+              <button id="goBackbtn">
+                Go Back
+              </button>
+              <button id="btn">
+                Next Step
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="form-container bg-yellow-300 h-4" data-index="3"></div>
+        <div class="form-container bg-green-300 h-4" data-index="4"></div>
       </div>
     </div>
   </main>
@@ -169,7 +205,7 @@
 
 
   Select your plan
-  You have the option of monthly or yearly billing.
+  
 
   Arcade
   $9/mo

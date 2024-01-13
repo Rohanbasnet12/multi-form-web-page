@@ -45,11 +45,26 @@ $(document).ready(function () {
     // TRACK THE LEFT BUTTON WHEN CLICKED
     $('.btn_rounded').each(function () {
         $(this).on('click', function () {
+            let varIndex = $(this).text();
+
+            // Use the function within not() to exclude other buttons
+            let otherIndex = $('.btn_rounded').not(this).text();
+
             // Set background to 'aquamarine' for the clicked button
             $(this).css('background', 'aquamarine');
 
             // Set background to 'none' for the other buttons
             $('.btn_rounded').not(this).css('background', 'none');
+
+            // Select the container with the specified data-index value
+            var container = $('[data-index="' + varIndex + '"]');
+
+            container.show(); // Show the container associated with the clicked button
+
+            // Hide containers associated with other buttons
+            $('.form-container').not('[data-index="' + varIndex + '"]').hide();
         });
     });
+
+
 });
