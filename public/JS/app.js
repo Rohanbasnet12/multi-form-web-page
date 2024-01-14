@@ -36,9 +36,6 @@ $(document).ready(function () {
             // Clear red borders and enable the button
             $('#userName, #userEmail, #userNumber').css('border', '');
             button.prop("disabled", false);
-
-            // Perform your desired actions or logic here
-            alert(`User name is ${userName}, his email is ${userEmail}, and his number is ${userNumber}`);
         }
     });
 
@@ -63,6 +60,65 @@ $(document).ready(function () {
 
             // Hide containers associated with other buttons
             $('.form-container').not('[data-index="' + varIndex + '"]').hide();
+        });
+    });
+
+    // IMPLEMENT GOBACK BUTTON
+    $('#goBackbtn').on('click', () => {
+        $('[data-index="' + 2 + '"]').css({
+            'display': 'none',
+        })
+        $('[data-index="' + 1 + '"]').css({
+            'display': 'block',
+        })
+    })
+
+    // IMPLEMENT BETWEEN THE TOGGLE OF RADIO BUTTON WHILE SELECTING PLAN
+    // IMPLEMENT BETWEEN THE TOGGLE OF RADIO BUTTON WHILE SELECTING PLAN
+    $('#radio').on('click', () => {
+
+        // Accessing custom color variables
+        const coolGrayColor = getComputedStyle(document.documentElement).getPropertyValue('--COOL-GRAY');
+        const marineBlueColor = getComputedStyle(document.documentElement).getPropertyValue('--MARINE-BLUE');
+
+        if ($('#radio').css('justify-content') == 'flex-start') {
+            $('.choosePlanBtn p:first-child').css('color', coolGrayColor);
+            $('.choosePlanBtn p:last-child').css('color', marineBlueColor);
+            $('#radio').css('justify-content', 'flex-end');
+
+            // View the yearly plan
+            $('.months').slideUp(); // Slide up the months container
+            $('.years').slideDown(); // Slide down the years container
+        } else {
+            $('.choosePlanBtn p:first-child').css('color', marineBlueColor);
+            $('.choosePlanBtn p:last-child').css('color', coolGrayColor);
+            $('#radio').css('justify-content', 'flex-start');
+
+            // View the monthly plan
+            $('.months').slideDown(); // Slide down the months container
+            $('.years').slideUp(); // Slide up the years container
+        }
+    });
+
+
+    // IMPLEMENT THE LOGIC BEHIND THE CHECK MARK IN THE THIRD STEP
+    $('.checkMark').on('click', function () {
+        // Set HTML content to an icon
+        $(this).html('<i class="fa-solid fa-check"></i>');
+
+        // Set background and border colors
+        $(this).css({
+            'background-color': 'marineBlueColor',
+            'border-color': 'marineBlueColor'
+        });
+
+        // Find other elements with the same class and reset their HTML content to plain text
+        $('.checkMark').not(this).html('');
+
+        // Reset background and border colors for other elements
+        $('.checkMark').not(this).css({
+            'background-color': '',
+            'border-color': ''
         });
     });
 

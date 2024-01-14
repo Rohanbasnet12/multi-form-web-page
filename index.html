@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
+  <!-- Linking font awesome to use thier fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <!-- LINKING TAILWIND FILES -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -105,8 +107,10 @@
 
       <!-- RIGHT CONTAINER -->
       <div id="right_container" class="container w-4/6 py-11 px-11">
+
+        <!-- FIRST STEP -->
         <div class="form-container" data-index="1" style="display: none;">
-          <!-- Remember to change the display to block after fixing the bottom code -->
+          <!-- REMEBER TO CHANGE THE DISPLAY PROPERTY AFTER CHANGING THE CODE AT THIRD STEP -->
           <div id="form" class="h-full flex flex-col gap-4 h-4">
             <div class="box1 h-1/6">
               <h1 class="text-2xl">Personal info</h1>
@@ -134,8 +138,8 @@
           </div>
         </div>
 
-        <div class="form-container h-4" data-index="2" style="display: block;">
-          <!-- Remember to change the display to none after fixing the code -->
+        <!-- SECOND STEP -->
+        <div class="form-container h-4" data-index="2">
           <div id="planForm">
             <div class="box1 h-1/6">
               <h1 class="text-2xl">Select your plan</h1>
@@ -145,32 +149,156 @@
             <div class="box2 h-4/6 flex flex-col gap-11">
               <div class="plan flex">
                 <div class="btn1 chooseBtn">
-                  <button></button>
+                  <button class="flex flex-col p-4 justify-between">
+                    <div class="top">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+                        <g fill="none" fill-rule="evenodd">
+                          <circle cx="20" cy="20" r="20" fill="#FFAF7E" />
+                          <path fill="#FFF" fill-rule="nonzero"
+                            d="M24.995 18.005h-3.998v5.998h-2v-5.998H15a1 1 0 0 0-1 1V29a1 1 0 0 0 1 1h9.995a1 1 0 0 0 1-1v-9.995a1 1 0 0 0-1-1Zm-5.997 8.996h-2v-1.999h2v2Zm2-11.175a2.999 2.999 0 1 0-2 0v2.18h2v-2.18Z" />
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="bottom">
+                      <div class="months">
+                        <p class="text-sm flex flex-col text-left">Arcade
+                          <span>$9/mo</span>
+                        </p>
+                      </div>
+                      <div class="years">
+                        <p class="text-sm flex flex-col text-left">Arcade
+                          <span>$90/yr</span>
+                        </p>
+                        <h5 class="text-sm text-left font-thin">2 months free</h5>
+                      </div>
+                    </div>
+                  </button>
                 </div>
                 <div class="btn2 chooseBtn">
-                  <button></button>
+                  <button class="flex flex-col p-4 justify-between">
+                    <div class="top">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+                        <g fill="none" fill-rule="evenodd">
+                          <circle cx="20" cy="20" r="20" fill="#F9818E" />
+                          <path fill="#FFF" fill-rule="nonzero"
+                            d="M25.057 15H14.944C12.212 15 10 17.03 10 19.885c0 2.857 2.212 4.936 4.944 4.936h10.113c2.733 0 4.943-2.08 4.943-4.936S27.79 15 25.057 15ZM17.5 20.388c0 .12-.108.237-.234.237h-1.552v1.569c0 .126-.138.217-.259.217H14.5c-.118 0-.213-.086-.213-.203v-1.583h-1.569c-.126 0-.217-.139-.217-.26v-.956c0-.117.086-.213.202-.213h1.584v-1.554c0-.125.082-.231.203-.231h.989c.12 0 .236.108.236.234v1.551h1.555c.125 0 .231.083.231.204v.988Zm5.347.393a.862.862 0 0 1-.869-.855c0-.472.39-.856.869-.856.481 0 .87.384.87.856 0 .471-.389.855-.87.855Zm1.9 1.866a.86.86 0 0 1-.87-.852.86.86 0 0 1 .87-.855c.48 0 .87.38.87.855a.86.86 0 0 1-.87.852Zm0-3.736a.862.862 0 0 1-.87-.854c0-.472.39-.856.87-.856s.87.384.87.856a.862.862 0 0 1-.87.854Zm1.899 1.87a.862.862 0 0 1-.868-.855c0-.472.389-.856.868-.856s.868.384.868.856a.862.862 0 0 1-.868.855Z" />
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="bottom">
+                      <div class="months">
+                        <p class="text-sm flex flex-col text-left">Advanced
+                          <span>$12/mo</span>
+                        </p>
+                      </div>
+                      <div class="years">
+                        <p class="text-sm flex flex-col text-left">Advanced
+                          <span>$120/yr</span>
+                        </p>
+                        <h5 class="text-sm text-left font-thin">2 months free</h5>
+                      </div>
+                    </div>
+                  </button>
                 </div>
                 <div class="btn3 chooseBtn">
-                  <button></button>
+                  <button class="flex flex-col p-4 justify-between">
+                    <div class="top">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+                        <g fill="none" fill-rule="evenodd">
+                          <circle cx="20" cy="20" r="20" fill="#483EFF" />
+                          <path fill="#FFF" fill-rule="nonzero"
+                            d="M26.666 13H13.334A3.333 3.333 0 0 0 10 16.333v7.193a3.447 3.447 0 0 0 2.14 3.24c1.238.5 2.656.182 3.56-.8L18.52 23h2.96l2.82 2.966a3.2 3.2 0 0 0 3.56.8 3.447 3.447 0 0 0 2.14-3.24v-7.193A3.333 3.333 0 0 0 26.666 13Zm-9.333 6H16v1.333a.667.667 0 0 1-1.333 0V19h-1.333a.667.667 0 0 1 0-1.334h1.333v-1.333a.667.667 0 1 1 1.333 0v1.333h1.333a.667.667 0 1 1 0 1.334Zm7.333 2a2.667 2.667 0 1 1 0-5.333 2.667 2.667 0 0 1 0 5.333ZM26 18.333a1.333 1.333 0 1 1-2.667 0 1.333 1.333 0 0 1 2.667 0Z" />
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="bottom">
+                      <div class="months">
+                        <p class="text-sm flex flex-col text-left">Pro
+                          <span>$15/mo</span>
+                        </p>
+                      </div>
+                      <div class="years">
+                        <p class="text-sm flex flex-col text-left">Pro
+                          <span>$150/yr</span>
+                        </p>
+                        <h5 class="text-sm text-left font-thin">2 months free</h5>
+                      </div>
+                    </div>
+                  </button>
                 </div>
               </div>
-              <div class="choosePlanBtn">
-                <button type="button"></button>
+              <div class="choosePlanBtn flex items-center justify-center gap-3 h-12">
+                <p>Monthly</p>
+                <div id="radio" class="w-9 h-4 rounded-2xl flex items-center justify-start">
+                  <button type="button" class="bg-white rounded-full w-3 h-3 mx-1"></button>
+                </div>
+                <p>Yearly</p>
               </div>
             </div>
 
 
-            <div class="box3 h-1/6 text-right flex justify-between">
-              <button id="goBackbtn">
+            <div class="box3 h-1/6 flex justify-between">
+              <button id="goBackbtn" class="h-12">
                 Go Back
               </button>
-              <button id="btn">
+              <button id="btn" class="h-12">
                 Next Step
               </button>
             </div>
           </div>
         </div>
-        <div class="form-container bg-yellow-300 h-4" data-index="3"></div>
+
+        <!-- THIRD STEP -->
+        <div class="form-container h-4" data-index="3" style="display: block" ;>
+          <!-- REMEMBER TO CHANGE THE DISPLAY PROPERTY AFTER FINISHING WITH THE CODE -->
+          <div id="thirdStep" class="h-full flex flex-col gap-4 h-4">
+            <div class="box1 h-1/6">
+              <h1 class="text-2xl"> Pick add-ons </h1>
+              <p>Add-ons help enhance your gaming experience.</p>
+            </div>
+
+            <div class="box2 h-4/6 flex flex-col gap-3">
+              <div class="choose-plan grid grid-cols-5 overflow-hidden">
+                <div class="checkBtn flex items-center justify-center">
+                  <button
+                    class="checkMark w-6 h-6 rounded-md border-2 border-slate-400 flex items-center justify-center p-1">
+
+                  </button>
+                </div>
+                <div class="planDetail col-span-4 bg-red-100"></div>
+              </div>
+              <div class="choose-plan grid grid-cols-5 overflow-hidden">
+                <div class="checkBtn flex items-center justify-center">
+                  <button
+                    class="checkMark w-6 h-6 rounded-md border-2 border-slate-400 flex items-center justify-center p-1">
+
+                  </button>
+                </div>
+                <div class="planDetail  col-span-4 bg-red-100"></div>
+              </div>
+              <div class="choose-plan grid grid-cols-5 overflow-hidden">
+                <div class="checkBtn flex items-center justify-center">
+                  <button
+                    class="checkMark w-6 h-6 rounded-md border-2 border-slate-400 flex items-center justify-center p-1">
+
+                  </button>
+                </div>
+                <div class="planDetail  col-span-4 bg-red-100"></div>
+              </div>
+            </div>
+
+            <div class="box3 h-1/6 flex justify-between">
+              <button id="goBackbtn" class="h-12">
+                Go Back
+              </button>
+              <button id="btn" class="h-12">
+                Next Step
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOURTH STEP -->
         <div class="form-container bg-green-300 h-4" data-index="4"></div>
       </div>
     </div>
@@ -207,14 +335,6 @@
   Select your plan
   
 
-  Arcade
-  $9/mo
-
-  Advanced
-  $12/mo
-
-  Pro
-  $15/mo
 
   Monthly
   Yearly
@@ -222,8 +342,7 @@
   Go Back
   Next Step
 
-  Pick add-ons
-  Add-ons help enhance your gaming experience.
+
 
   Online service
   Access to multiplayer games
