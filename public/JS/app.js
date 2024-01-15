@@ -108,18 +108,23 @@ $(document).ready(function () {
 
         // Set background and border colors
         $(this).css({
-            'background-color': 'marineBlueColor',
-            'border-color': 'marineBlueColor'
+            'background-color': 'SlateBlue ',
+            'border-color': 'SlateBlue ',
+            'color': 'white'
         });
 
         // Find other elements with the same class and reset their HTML content to plain text
         $('.checkMark').not(this).html('');
 
         // Reset background and border colors for other elements
+
         $('.checkMark').not(this).css({
             'background-color': '',
             'border-color': ''
         });
+
+        // ON THE THIRD STEP CHANGE THE PRICING TO THE YEARLY PLAN
+        $(".right p").text('+$10/yr');
     });
 
 

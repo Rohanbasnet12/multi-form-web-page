@@ -114,14 +114,14 @@
 .choose-plan {
     width: 100%;
     height: 10vh;
-    border: 2px solid var(--COOL-GRAY);
+    border: 1px solid var(--COOL-GRAY);
     border-radius: .51em;
     outline: none;
     cursor: pointer;
 }
 
 .choose-plan:hover {
-    border: 2px solid var(--PURPLISH-BLUE);
+    border: 1px solid var(--PURPLISH-BLUE);
 }
 
 /* GENERAL STYLES */
@@ -270,6 +270,10 @@ body {
     color: var(--MARINE-BLUE);
 }
 
+.choose-plan:hover {
+    background: var(--MANGOLIA);
+}
+
 .years {
     display: none;
 }
@@ -278,4 +282,18 @@ body {
 
 #thirdStep {
     height: 75vh;
+}
+
+.left p {
+    color: var(--MARINE-BLUE);
+    font-weight: var(--FONT-WEIGHT3);
+}
+
+.left span {
+    color: var(--COOL-GRAY);
+}
+
+.right p {
+    color: var(--PURPLISH-BLUE);
+    font-size: .9em;
 }
