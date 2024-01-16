@@ -32,6 +32,18 @@ $(document).ready(function () {
                 $('#errorName, #errorEmail, #errorNumber').hide();
                 button.prop("disabled", false);
             }, 2000);
+
+            $('#btn:nth-child(1)').on('click', () => {
+                $('[data-index="' + 1 + '"]').css({
+                    'display': 'none',
+                })
+                $('[data-index="' + 2 + '"]').css({
+                    'display': 'block',
+                })
+
+                $('.btn_rounded:first-child').css('background', 'none')
+                $('.btn_rounded:nth-child(2)').css('background', 'aquamarine')
+            });
         } else {
             // Clear red borders and enable the button
             $('#userName, #userEmail, #userNumber').css('border', '');
@@ -63,6 +75,31 @@ $(document).ready(function () {
         });
     });
 
+    // IMPLEMENT NEXT STEP BUTTON
+
+    // TOGGLE BETWEENT THE DISPLAY OF 2ND AND 3RD CHILD
+    $('#btn:nth-child(2)').on('click', () => {
+        $('[data-index="' + 2 + '"]').css({
+            'display': 'none',
+        })
+        $('[data-index="' + 3 + '"]').css({
+            'display': 'block',
+        })
+
+        $('.btn_rounded:nth-child(2)').css('background', 'none')
+        $('.btn_rounded:nth-child(3)').css('background', 'aquamarine')
+    });
+
+    // TOGGLE BETWEENT THE DISPLAY OF 3ND AND 4RD CHILD
+    $('#btn:nth-child(3)').on('click', () => {
+        $('[data-index="' + 3 + '"]').css({
+            'display': 'none',
+        })
+        $('[data-index="' + 4 + '"]').css({
+            'display': 'block',
+        })
+    });
+
     // IMPLEMENT GOBACK BUTTON
     $('#goBackbtn').on('click', () => {
         $('[data-index="' + 2 + '"]').css({
@@ -73,7 +110,6 @@ $(document).ready(function () {
         })
     })
 
-    // IMPLEMENT BETWEEN THE TOGGLE OF RADIO BUTTON WHILE SELECTING PLAN
     // IMPLEMENT BETWEEN THE TOGGLE OF RADIO BUTTON WHILE SELECTING PLAN
     $('#radio').on('click', () => {
 
@@ -89,6 +125,11 @@ $(document).ready(function () {
             // View the yearly plan
             $('.months').slideUp(); // Slide up the months container
             $('.years').slideDown(); // Slide down the years container
+
+            // CHANGE THE PLAN TO YEARLY PLAN ON THE THIRD STEP
+            $('.rightPlanSpan').css('display', 'block')
+            $('.rightPlanParah').css('display', 'none')
+
         } else {
             $('.choosePlanBtn p:first-child').css('color', marineBlueColor);
             $('.choosePlanBtn p:last-child').css('color', coolGrayColor);
@@ -97,6 +138,10 @@ $(document).ready(function () {
             // View the monthly plan
             $('.months').slideDown(); // Slide down the months container
             $('.years').slideUp(); // Slide up the years container
+
+            // CHANGE THE PLAN TO MONTHLY PLAN 
+            $('.rightPlanSpan').css('display', 'none')
+            $('.rightPlanParah').css('display', 'block')
         }
     });
 
@@ -122,9 +167,6 @@ $(document).ready(function () {
             'background-color': '',
             'border-color': ''
         });
-
-        // ON THE THIRD STEP CHANGE THE PRICING TO THE YEARLY PLAN
-        $(".right p").text('+$10/yr');
     });
 
 

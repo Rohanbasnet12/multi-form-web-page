@@ -297,3 +297,9 @@ body {
     color: var(--PURPLISH-BLUE);
     font-size: .9em;
 }
+
+.rightPlanSpan {
+    display: none;
+    color: var(--PURPLISH-BLUE);
+    font-size: .9em;
+}
